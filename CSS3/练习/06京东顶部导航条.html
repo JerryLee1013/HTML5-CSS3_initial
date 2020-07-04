@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="iconfont_exercise/iconfont.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.outer {
+        width: 100%;
+        height: 30px;
+        background-color: rgb(227, 228, 229);
+        font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial,
+          Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+        position: relative;
+      }
+
+      div.inner {
+        width: 75%;
+        min-width: 800px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      div.left {
+        float: left;
+      }
+
+      div.left > a {
+        height: 30px;
+        line-height: 30px;
+      }
+
+      ul.nav {
+        list-style: none;
+        float: right;
+      }
+      ul > li {
+        display: inline;
+        /* margin: 0 5px; */
+        text-align: center;
+      }
+
+      ul > li > a {
+        height: 30px;
+        line-height: 30px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #999;
+      }
+      a.red {
+        color: red;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      ul > li:not(:last-child)::after {
+        content: "";
+
+        border-right: 1px solid #cccccc;
+        margin: 0 10px;
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <div class="left">
+          <i class="iconfont icon-dingwei"></i>
+          <a href="">北京</a>
+        </div>
+        <ul class="nav">
+          <a href="javascript:;"> 你好，请登录</a>
+          <li><a href="javascript:;" class="red">免费注册</a></li>
+          <li><a href="javascript:;">我的订单</a></li>
+          <li><a href="javascript:;">我的京东</a></li>
+          <li><a href="javascript:;">京东会员</a></li>
+          <li>
+            <a href="javascript:;" class="red"
+              >企业采购
+              <i class="iconfont icon-jiantouxia"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;"
+              >客户服务
+              <i class="iconfont icon-jiantouxia"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;"
+              >网站导航
+              <i class="iconfont icon-jiantouxia"></i>
+            </a>
+          </li>
+          <li><a href="javascript:;">手机京东</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
