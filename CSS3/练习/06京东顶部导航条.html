@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="iconfont_exercise/iconfont.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <style>
+      body {
+        height: 1000px;
+      }
       div.outer {
         width: 100%;
         height: 30px;
@@ -14,6 +17,7 @@
         font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial,
           Hiragino Sans GB, "\5B8B\4F53", sans-serif;
         position: relative;
+        /* overflow: hidden; */
       }
       div.inner {
         width: 70%;
@@ -26,6 +30,42 @@
         bottom: 0;
         top: 0;
         margin: auto;
+        /* box-sizing: border-box; */
+      }
+
+      .location {
+        position: absolute;
+      }
+
+      .location .city-list {
+        display: none;
+        width: 320px;
+        height: 436px;
+        background-color: #fff;
+        border: 1px solid rgb(204, 204, 204);
+
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        z-index: 999;
+        top: 31px;
+      }
+
+      .location:hover .city-list {
+        display: block;
+        /* background-color: #fff; */
+      }
+      .current-city {
+        width: 50px;
+        position: relative;
+        padding-bottom: 1px;
+        z-index: 9999;
+        border: 1px solid transparent;
+      }
+
+      .location:hover .current-city {
+        background-color: white;
+        border: 1px solid rgb(204, 204, 204);
+        border-bottom: none;
       }
       a {
         color: #999;
@@ -36,11 +76,10 @@
       a.red {
         color: red;
       }
-      div.location {
-        float: left;
-      }
+
       ul.shot-cut {
-        float: right;
+        position: absolute;
+        right: 0;
       }
       ul > li {
         display: inline-block;
@@ -74,6 +113,7 @@
             ></i>
             <a href="javascript:;">北京</a>
           </div>
+          <div class="city-list"></div>
         </div>
         <ul class="shot-cut">
           <li>
