@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      小米商城 - 小米10 Pro、Redmi 10X、小米MIX Alpha，小米电视官方网站
+    </title>
+    <!-- 引入重置样式表 -->
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <!-- 引入font图标字体 -->
+    <link rel="stylesheet" href="font/css/all.css" />
+    <style>
+      .header-nav {
+        height: 40px;
+        background-color: #333;
+        font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei,
+          Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+        color: #b0b0b0;
+      }
+
+      .header-nav .nav-list {
+        width: 1226px;
+        height: 100%;
+        background-color: #333;
+        /* border: 1px solid yellow; */
+        margin: auto;
+        line-height: 40px;
+      }
+      .nav-list ul > li {
+        display: inline-block;
+      }
+
+      .nav-list .left-list {
+        float: left;
+      }
+      .nav-list .right-list {
+        float: right;
+        position: relative;
+      }
+
+      li a:hover {
+        color: white;
+      }
+      li.line {
+        height: 10px;
+        width: 1px;
+        line-height: 10px;
+        margin: 0 5px;
+        line-height: 10px;
+        background-color: #424242;
+      }
+
+      li.shoppingcar {
+        height: 100%;
+        width: 120px;
+        text-align: center;
+        background-color: #424242;
+        padding-bottom: 1px;
+        margin-left: 20px;
+        position: relative;
+        z-index: 9999;
+      }
+
+      /* 设置下载app下拉框  */
+      li.download {
+        position: relative;
+      }
+      span.xiala {
+        display: none;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid white;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        bottom: -1px;
+        left: 10px;
+      }
+      .download-app {
+        display: none;
+        width: 120px;
+        height: 130px;
+        margin: 1px auto 0;
+        position: absolute;
+        left: -38px;
+        right: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        z-index: 9998;
+      }
+
+      li.download:hover a {
+        color: white;
+      }
+
+      li.download:hover span {
+        display: block;
+      }
+      li.download:hover .download-app {
+        display: block;
+      }
+
+      /* 设置购物车下拉框 */
+      div.right {
+        float: right;
+        position: relative;
+        margin-left: 30px;
+      }
+
+      div.shoppingcar {
+        position: relative;
+        background-color: #424242;
+        padding: 0 20px;
+        text-align: center;
+        z-index: 9999;
+      }
+
+      div.shoppingcar-list {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        width: 300px;
+        height: 100px;
+        /* background-color: pink; */
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+        margin-top: -1px;
+      }
+
+      div.right:hover .shoppingcar-list {
+        display: block;
+      }
+      div.right:hover .shoppingcar {
+        padding-bottom: 1px;
+        background-color: #fff;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 创建header导航栏 -->
+    <header class="header-nav">
+      <div class="nav-list">
+        <ul class="left-list">
+          <li><a href="javascript:;">小米商城</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">MIUI</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">loT</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">云服务</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">金融</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">有品</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">小爱开放平台</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">企业团购</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">资质证照</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">协议规则</a></li>
+          <li class="line"></li>
+          <li class="download">
+            <a href="javascript:;">下载app</a>
+            <span class="xiala"></span>
+            <div class="download-app"></div>
+          </li>
+          <li class="line"></li>
+          <li><a href="javascript:;">Selection Location</a></li>
+        </ul>
+        <ul class="right-list">
+          <li><a href="javascript:;">登录</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">注册</a></li>
+          <li class="line"></li>
+          <li><a href="javascript:;">消息通知</a></li>
+          <div class="right">
+            <div class="shoppingcar">
+              <i class="fas fa-shopping-cart"></i>
+              <a href="javascript:;">购物车&nbsp;&nbsp;(0)</a>
+            </div>
+            <div class="shoppingcar-list"></div>
+          </div>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 创建第二导航栏-->
+    <div class="second-nav"></div>
+
+    <!-- 创建中部商品introduce区域 -->
+    <div class="product-intro">
+      <aside class="intro-nav"></aside>
+      <div class="pic"></div>
+    </div>
+
+    <div class="mixed-box"></div>
+  </body>
+</html>
