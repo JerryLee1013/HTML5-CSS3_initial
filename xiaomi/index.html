@@ -25,7 +25,14 @@
     <!-- 设置mixed-box样式 -->
     <link rel="stylesheet" href="CSS/mixed-box.css" />
 
-    <style></style>
+    <style>
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
   </head>
 
   <body>
@@ -79,7 +86,7 @@
     </header>
 
     <!-- 创建第二导航栏-->
-    <div class="second-nav">
+    <div class="second-nav clearfix">
       <div class="logo">
         <a href="javascript:;"></a>
       </div>
@@ -136,7 +143,7 @@
     </div>
 
     <!-- 创建中部商品introduce区域 -->
-    <div class="product-intro">
+    <div class="product-intro clearfix">
       <aside class="intro-nav">
         <ul>
           <li>
@@ -188,7 +195,7 @@
       </div>
     </div>
 
-    <div class="mixed-box">
+    <div class="mixed-box clearfix">
       <div class="left-box">
         <div>
           <i class="iconfont icon-icon-"></i><br />
