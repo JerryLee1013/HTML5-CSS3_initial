@@ -10,102 +10,22 @@
     <link rel="stylesheet" href="CSS/reset.css" />
     <!-- 引入font图标字体 -->
     <link rel="stylesheet" href="font/css/all.css" />
+    <!-- 引入小米图标字体文件 -->
+    <link rel="stylesheet" href="font/font_1936955_xrp3of38jqo/iconfont.css" />
 
     <!-- 顶部导航的样式设置 -->
     <link rel="stylesheet" href="CSS/header.css" />
 
     <!-- 第二导航栏设置 -->
-    <style>
-      .second-nav {
-        position: relative;
-        width: 1226px;
-        height: 100px;
-        margin: 0 auto;
-      }
+    <link rel="stylesheet" href="CSS/second-nav.css" />
 
-      .second-nav a.logo {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 50px;
-        height: 50px;
-        margin: auto;
-        background-image: url("./img/milogo.png");
-        background-origin: border-box;
-        background-position: 0 0;
-      }
+    <!-- priduct-intro样式设置 -->
+    <link rel="stylesheet" href="CSS/product-intro.css" />
 
-      .second-nav a.logo:hover {
-        background-position: -50px 0;
-      }
-
-      .second-nav .nav-div {
-        width: 650px;
-        height: 100%;
-        line-height: 100px;
-        margin-left: 200px;
-        text-align: center;
-      }
-
-      .second-nav .nav-div a {
-        font: 16px Helvetica Neue, Helvetica, Arial, Microsoft Yahei,
-          Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
-        padding: 0 8px;
-        color: #333;
-      }
-
-      .second-nav .nav-div a:hover {
-        color: red;
-      }
-
-      /* 设置搜索框样式 */
-
-      .search-form {
-        width: 300px;
-        height: 50px;
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        line-height: 50px;
-        text-align: center;
-
-        position: absolute;
-        right: 0;
-        top: 25px;
-      }
-
-      .search-form td:last-child {
-        width: 50px;
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-      }
-
-      .search-form input {
-        width: 250px;
-        padding: 0 10px;
-      }
-
-      .search-form i {
-        font-size: 20px;
-        color: rgba(0, 0, 0, 0.6);
-      }
-
-      /* 设置搜索框鼠标样式 */
-      .search-form:hover {
-        border: 1px solid pink;
-      }
-
-      .search-form:hover td:last-child {
-        border: 1px solid pink;
-      }
-
-      .search-form td:last-child:hover {
-        background-color: orange;
-      }
-
-      .search-form td:last-child:hover i {
-        color: white;
-      }
-    </style>
+    <!-- 设置mixed-box样式 -->
+    <link rel="stylesheet" href="CSS/mixed-box.css" />
   </head>
+
   <body>
     <!-- 创建header导航栏 -->
     <header class="header-nav">
@@ -160,15 +80,20 @@
     <div class="second-nav">
       <a class="logo" href="javascript:;"></a>
       <div class="nav-div">
-        <a href="javascript:;">小米手机</a>
-        <a href="javascript:;">Redmi红米</a>
-        <a href="javascript:;">电视</a>
-        <a href="javascript:;">笔记本</a>
-        <a href="javascript:;">家电</a>
-        <a href="javascript:;">路由器</a>
-        <a href="javascript:;">只能硬件</a>
-        <a href="javascript:;">服务</a>
-        <a href="javascript:;">社区</a>
+        <a href="javascript:;"
+          >小米手机
+          <!-- 隐藏的下拉框 -->
+          <span class="second-xiala"></span>
+        </a>
+
+        <a href="javascript:;">Redmi红米 <span class="second-xiala"></span></a>
+        <a href="javascript:;">电视 <span class="second-xiala"></span></a>
+        <a href="javascript:;">笔记本 <span class="second-xiala"></span></a>
+        <a href="javascript:;">家电 <span class="second-xiala"></span></a>
+        <a href="javascript:;">路由器 <span class="second-xiala"></span></a>
+        <a href="javascript:;">智能硬件 <span class="second-xiala"></span></a>
+        <a href="javascript:;">服务 <span class="second-xiala"></span></a>
+        <a href="javascript:;">社区 <span class="second-xiala"></span></a>
       </div>
 
       <table class="search-form">
@@ -185,10 +110,89 @@
 
     <!-- 创建中部商品introduce区域 -->
     <div class="product-intro">
-      <aside class="intro-nav"></aside>
-      <div class="pic"></div>
+      <aside class="intro-nav">
+        <ul>
+          <li>
+            <a href="javascript:;">手机&nbsp;电话卡</a>
+            <span></span>
+          </li>
+          <li>
+            <a href="javascript:;">电视&nbsp;盒子</a>
+            <span></span>
+          </li>
+          <li>
+            <a href="javascript:;">笔记本&nbsp;显示器&nbsp;平板</a><span></span>
+          </li>
+          <li><a href="javascript:;">家电&nbsp;插线板</a><span></span></li>
+          <li><a href="javascript:;">出行&nbsp;穿戴</a><span></span></li>
+          <li><a href="javascript:;">智能&nbsp;路由器</a><span></span></li>
+          <li><a href="javascript:;">电源&nbsp;配件</a><span></span></li>
+          <li><a href="javascript:;">健康&nbsp;儿童</a><span></span></li>
+          <li><a href="javascript:;">耳机&nbsp;音箱</a><span></span></li>
+          <li><a href="javascript:;">生活&nbsp;箱包</a><span></span></li>
+        </ul>
+      </aside>
+      <div class="pic-list">
+        <ul class="img-list">
+          <li>
+            <a href=""><img src="./img/milunbo1.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="./img/milunbo2.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="./img/milunbo3.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="./img/milunbo4.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="./img/milunbo5.jpg" alt="" /></a>
+          </li>
+
+          <div class="img-icon">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+          </div>
+        </ul>
+      </div>
     </div>
 
-    <div class="mixed-box"></div>
+    <div class="mixed-box">
+      <div class="left-box">
+        <div>
+          <i class="iconfont icon-icon-"></i><br />
+          <a href="javascript:;">小米秒杀</a>
+        </div>
+        <div>
+          <i class="iconfont icon-qiye"></i><br />
+          <a href="javascript:;">企业团购</a>
+        </div>
+        <div>
+          <i class="iconfont icon-F_round"></i><br />
+          <a href="javascript:;">F码通道</a>
+        </div>
+        <div>
+          <i class="iconfont icon-simqia"></i><br />
+          <a href="javascript:;">米粉卡</a>
+        </div>
+        <div>
+          <i class="iconfont icon-renminbi"></i><br />
+          <a href="javascript:;">以旧换新</a>
+        </div>
+        <div>
+          <i class="iconfont icon-huafei"></i><br />
+          <a href="javascript:;">花费充值</a>
+        </div>
+      </div>
+      <div class="right-box">
+        <a href="javascript:;"><img src="img/mix1.jpg" alt="" /></a>
+        <a href="javascript:;"><img src="img/mix2.jpg" alt="" /></a>
+        <a href="javascript:;"><img src="img/mix3.jpg" alt="" /></a>
+      </div>
+    </div>
   </body>
 </html>
