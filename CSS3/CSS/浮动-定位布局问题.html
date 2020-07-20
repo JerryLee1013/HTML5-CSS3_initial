@@ -1,7 +1,7 @@
 <!--
  * @Brief: 
  * @LastEditors: Jerry Lee
- * @LastEditTime: 2020-07-20 00:03:40
+ * @LastEditTime: 2020-07-20 10:27:25
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -44,8 +44,16 @@
                                     ——为什么box2作为块级元素，在没有开启浮动的情况下，
                                     没有独占一行，并且边框样式和文本行相互分离？
 
+                                问题解答：
+                                    CSS中脱离文档流，也就是将元素从普通的布局排版中拿走，其他盒子在定位的时候，会当做脱离文档流的元素不存在而进行定位。
+　　                                需要注意的是，使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在周围。
+　　                                而对于使用absolute positioning脱离文档流的元素，其他盒子与其他盒子内的文本都会无视它。
+————————————————
+                                    版权声明：本文为CSDN博主「paediatrician」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+                                    原文链接：https://blog.csdn.net/paediatrician/article/details/52583653
+
                 */
-                /* position: relative; */
+                position: relative;
 
                 /* 开启绝对定位时，box2布局整体覆盖了box1的元素布局 */
                 /* position: absolute; */
@@ -60,8 +68,8 @@
         </style>
     </head>
     <body>
-        <div class="box1">div1</div>
+        <div class="box1"></div>
         <div class="box2">div2</div>
-        <div class="box3">div3</div>
+        <div class="box3"></div>
     </body>
 </html>
